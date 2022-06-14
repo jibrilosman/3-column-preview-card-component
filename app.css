@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);/* background, headings, buttons */
+}
+body {
+    width: 100%;
+    height: auto;
+    background: var(--very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
+    overflow: hidden;
+   
+}
+
+.container {
+    width: 70%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 2rem auto;
+    
+}
+/* ******************************* */
+/* ************* SEDANS *********** */
+/* ******************************* */
+.sedans {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background: var(--bright-orange);
+    padding: 60px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+}
+p {
+    font-size: 1rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transparent-white);
+    line-height: 1.7;
+}
+.btn {
+    font-size: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    background: var(--very-light-gray);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+   .sedans > .btn {
+    color: var(--bright-orange);
+   }
+ .sedans > .btn:hover {
+    background: var(--bright-orange);
+    color: var(--very-light-gray);
+    border: 3px solid var(--very-light-gray);
+}
+
+/* **************************** */
+/* ************* SUVS *********** */
+/* **************************** */
+.suvs{
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    background: var(--dark-cyan);
+    padding: 60px;
+}
+   .suvs > .btn {
+    color: var(--dark-cyan);
+   }
+   .suvs > .btn:hover {
+    background: var(--dark-cyan);
+    color: var(--very-light-gray);
+    border: 3px solid var(--very-light-gray);
+}
+/* **************************** */
+/* ************* LUXURY *********** */
+/* **************************** */
+.luxury {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    background: var(--very-dark-cyan);
+    padding: 60px;
+}
+    .luxury > .btn {
+     color: var(--very-dark-cyan);
+    }
+    .luxury > .btn:hover {
+        background: var(--very-dark-cyan);
+        color: var(--very-light-gray);
+        border: 3px solid var(--very-light-gray);
+    }
+ /* *************************** */
+    /* ************* FOOTER *********** */
+ /* *************************** */
+.attribution { 
+    font-size: 14px; 
+    text-align: center;
+}
+.attribution a {
+     color: hsl(0, 100%, 50%);
+}
+
+
+
+
+
+/* ************************************ */
+/* ************* media query ********** */
+/* ************************************ */
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .sedans {
+        grid-row: 1 / 2;
+        background: var(--bright-orange);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .suvs {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        background: var(--dark-cyan);
+    }
+    .luxury {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        background: var(--very-dark-cyan);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}    
